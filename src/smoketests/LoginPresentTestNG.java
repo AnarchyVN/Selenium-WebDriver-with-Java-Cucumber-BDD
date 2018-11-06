@@ -26,7 +26,7 @@ public class LoginPresentTestNG {
 		System.out.println("Stating test");
 		String WeURl = "http://sdettraining.com/trguitransactions/AccountManagement.aspx";
 		
-		driver = utilities.DriverFactory.open("chrome");
+		driver = utilities.DriverFactory.open("chrome", System.getProperty("os.name").toLowerCase());
 		driver.get(WeURl);
 	}
 	

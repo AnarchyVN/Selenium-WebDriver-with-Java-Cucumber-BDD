@@ -2,7 +2,6 @@ package tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -25,7 +24,7 @@ public class LoginDDT {
 	
 	@BeforeMethod
 	public void setUp() {
-		driver = utilities.DriverFactory.open("firefox");
+		driver = utilities.DriverFactory.open("firefox", System.getProperty("os.name").toLowerCase());
 		driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
 	}
 	

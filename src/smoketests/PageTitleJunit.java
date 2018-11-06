@@ -25,7 +25,7 @@ public class PageTitleJunit {
 	@Before
 	public void setUp() {
 		System.out.println("Initializing the driver");
-		driver = utilities.DriverFactory.open("chrome");
+		driver = utilities.DriverFactory.open("chrome", System.getProperty("os.name").toLowerCase());
 	}
 	
 	@After
