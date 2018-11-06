@@ -34,7 +34,7 @@ public class DriverFactory {
 			}
 			else {
 				// code for Firefox
-				System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\drivers\\windows\\windows\\geckodriver.exe");
+				System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\drivers\\windows\\geckodriver.exe");
 				return new FirefoxDriver();	
 			}
 		}
