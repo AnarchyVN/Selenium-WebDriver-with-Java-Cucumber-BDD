@@ -11,6 +11,7 @@ public class NewAccount {
 
 	public static void main(String[] args) {
 		String browserType = "chrome";
+		String osType = System.getProperty("os.name").toLowerCase();
 		String name = "Huy Hoang";
 		String email = "hh@testemail.com";
 		String phone = "123456789";
@@ -23,7 +24,7 @@ public class NewAccount {
 		
 		//Define Webdriver
 		WebDriver driver;
-		driver = utilities.DriverFactory.open(browserType);
+		driver = utilities.DriverFactory.open(browserType, osType);
 		driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
 		driver.findElement(By.xpath("/html/body/form/div[3]/div[2]/div/div[2]/a")).click();
 		

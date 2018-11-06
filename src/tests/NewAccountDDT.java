@@ -85,7 +85,7 @@ public class NewAccountDDT {
 	
 	@Before
 	public void setUp() {
-		driver = utilities.DriverFactory.open("chrome");
+		driver = utilities.DriverFactory.open("chrome", System.getProperty("os.name").toLowerCase());
 		driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
 		driver.findElement(By.xpath("/html/body/form/div[3]/div[2]/div/div[2]/a")).click();
 	}
